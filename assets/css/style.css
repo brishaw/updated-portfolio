@@ -177,6 +177,9 @@ body .container .main .contact-button:hover {
   left: -10px;
   transition: 200ms ease-in all;
 }
+body .container .main .bio h2 {
+  color: #ffffff;
+}
 body .container .main .bio p {
   color: #ffffff;
   font-size: 1.1rem;
@@ -268,7 +271,7 @@ body #test1 {
   height: 100%;
   top: 0;
   left: 0;
-  margin-top: 500px;
+  margin-top: 200px;
   position: fixed;
   z-index: -1;
   opacity: 0.1;
