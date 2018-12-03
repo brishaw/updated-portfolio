@@ -13,7 +13,7 @@ $(".control-button").on("click", function(){
     $(".control-button").css("display", "none");
     $(".right").css("display", "none");
     $(".main").fadeIn("slow");
-    $(".footer").fadeIn("slow");
+    $("footer").fadeIn("slow");
   }; // off
   
   // setInterval(function(){
@@ -30,14 +30,17 @@ window.requestAnimationFrame = window.requestAnimationFrame
   || window.msRequestAnimationFrame
   || function (f) { setTimeout(f, 1000 / 60) }
 
-var test1 = document.getElementById('test1')
-var test2 = document.getElementById('test2')
+var test1 = document.getElementById('test1');
+var test2 = document.getElementById('test2');
+var test3 = document.getElementById('test3');
+var test4 = document.getElementById('test4')
 
 function parallaxbubbles() {
   var scrolltop = window.pageYOffset // get number of pixels document has scrolled vertically 
   test1.style.top = -scrolltop * .2 + 'px' // move test1 at 20% of scroll rate
   test2.style.top = -scrolltop * .5 + 'px' // move test2 at 50% of scroll rate
-  test3.style.top = -scrolltop * .4 + 'px' // move test2 at 50% of scroll rate
+  test3.style.top = -scrolltop * .4 + 'px' // move test2 at 40% of scroll rate
+  test4.style.top = -scrolltop * .3 + 'px' // move test2 at 30% of scroll rate
 }
 
 window.addEventListener('scroll', function () { // on page scroll
