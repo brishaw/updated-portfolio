@@ -12,9 +12,6 @@ body {
   background-image: radial-gradient(circle at top center, #00416f, #000000);
   font-family: "Helvetica Neue", sans-serif;
   background-attachment: fixed;
-  /*========================
-      Image Caption #2
-  ==========================*/
 }
 body .control-button {
   position: absolute;
@@ -72,7 +69,7 @@ body .container .panel {
 body .container .top {
   width: 100%;
   height: 50%;
-  background-image: linear-gradient(#000000, #333333);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(51, 51, 51, 0.3)), url("../images/topm.png");
   background-color: #000000;
   border-bottom: 1px solid #4a4a4a;
 }
@@ -80,7 +77,7 @@ body .container .left {
   width: 50%;
   height: 50%;
   bottom: 0;
-  background-image: linear-gradient(#333333, #000000);
+  background-image: linear-gradient(rgba(51, 51, 51, 0.3), rgba(0, 0, 0, 0.8)), url("../images/leftm.png");
   background-color: #000000;
   border-right: 1px solid #4a4a4a;
 }
@@ -89,7 +86,7 @@ body .container .right {
   height: 50%;
   right: 0;
   bottom: 0;
-  background-image: linear-gradient(#333333, #000000);
+  background-image: linear-gradient(rgba(51, 51, 51, 0.3), rgba(0, 0, 0, 0.8)), url("../images/rightm.png");
   background-color: #000000;
   border-left: 1px solid #4a4a4a;
 }
@@ -356,28 +353,28 @@ body .modal .modal-content img {
     opacity: 1;
   }
 }
-body .tc-image-caption2 {
+body .img-caption {
   position: relative;
   overflow: hidden;
 }
-body .tc-image-caption2 img {
+body .img-caption img {
   -webkit-transform: scale(1);
   transform: scale(1);
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-body .tc-image-caption2:hover img {
+body .img-caption:hover img {
   -webkit-transform: scale(1.3);
   transform: scale(1.3);
 }
-body .tc-image-caption2 .caption {
+body .img-caption .caption {
   position: absolute;
   bottom: 20px;
   z-index: 10;
   width: 100%;
   text-align: center;
 }
-body .tc-image-caption2:after {
+body .img-caption:after {
   position: absolute;
   content: "";
   height: 100%;
@@ -388,10 +385,10 @@ body .tc-image-caption2:after {
   opacity: 0;
   top: 0;
 }
-body .tc-image-caption2:hover:after {
+body .img-caption:hover:after {
   opacity: 1;
 }
-body .tc-image-caption2 .caption h3 {
+body .img-caption .caption h3 {
   color: #fff;
   font-size: 19px;
   padding-top: 12px;
@@ -403,7 +400,7 @@ body .tc-image-caption2 .caption h3 {
   transition: all 0.5s ease-in-out;
   opacity: 0;
 }
-body .tc-image-caption2 .caption p {
+body .img-caption .caption p {
   -webkit-transform: translateY(50px);
   transform: translateY(50px);
   color: rgba(255, 255, 255, 0.6);
@@ -411,13 +408,13 @@ body .tc-image-caption2 .caption p {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-body .tc-image-caption2:hover .caption h3,
-body .tc-image-caption2:hover .caption p {
+body .img-caption:hover .caption h3,
+body .img-caption:hover .caption p {
   opacity: 1;
   -webkit-transform: translateY(0px);
   transform: translateY(0px);
 }
-body .tc-image-caption2 .link-wrap {
+body .img-caption .link-wrap {
   position: absolute;
   top: 45%;
   left: 50%;
@@ -425,7 +422,7 @@ body .tc-image-caption2 .link-wrap {
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
-body .tc-image-caption2 .link-wrap a {
+body .img-caption .link-wrap a {
   display: inline-block;
   height: 36px;
   width: 36px;
@@ -439,21 +436,21 @@ body .tc-image-caption2 .link-wrap a {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-body .tc-image-caption2 .link-wrap a:first-child {
+body .img-caption .link-wrap a:first-child {
   -webkit-transform: translateY(-30px);
   transform: translateY(-30px);
   margin-right: 2px;
 }
-body .tc-image-caption2 .link-wrap a:last-child {
+body .img-caption .link-wrap a:last-child {
   -webkit-transform: translateY(-60px);
   transform: translateY(-60px);
 }
-body .tc-image-caption2:hover .link-wrap a {
+body .img-caption:hover .link-wrap a {
   opacity: 1;
   -webkit-transform: translateY(0px);
   transform: translateY(0px);
 }
-body .tc-image-caption2 .link-wrap a:hover {
+body .img-caption .link-wrap a:hover {
   background-color: rgba(255, 255, 255, 0.8);
   color: #444;
 }

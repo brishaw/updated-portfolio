@@ -71,72 +71,58 @@ $(document).ready(function () {
   });
 });
 
-// modals
-
-// var modal = document.getElementById("myModal");
-
-// var btn = document.getElementById("btn1");
-
-// var span = document.getElementsByClassName("close")[0];
-
-// btn1.onclick = function() {
-//   modal.style.display = "block";
-// }
-
-// span.onclick = function() {
-//   modal.style.display = "none";
-// }
-
-// window.onclick = function(event) {
-//   if (event.target == modal) {
-//     modal.style.display = "none";
-//   }
-// }
+//
 
 var modal = document.getElementById("myModal");
-var img = $(".myImg");
 var modalImg = $("#images");
 var captionText = document.getElementById("caption");
 var span = document.getElementsByClassName("close")[0];
 
-$(".myImg").click(function() {
-  modal.style.display = "block";
-  var newSrc = this.src;
+$(".myImg").click(function () {
+  $("#myModal").css("display", "block");
+  var newSrc = document.getElementsByClassName("izage")[0].src;
+  
+  console.log(newSrc);
   modalImg.attr("src", newSrc);
-  captionText.innerHTML = this.alt;
+  captionText.innerHTML = document.getElementsByClassName("izage")[0].alt;
 });
 
 span.onclick = function() {
-  modal.style.display = "none";
+  $("#myModal").fadeOut("slow");
 }
 
 window.onclick = function (event) {
   if (event.target == modal) {
-    modal.style.display = "none";
+    $("#myModal").fadeOut("slow");
   }
 }
 
-// var winH = $(window).height();
-// var winW = $(window).width();
 
-// $(".modal").css('top', winH / 2 - $(".modal").height() / 2);
-// $(".modal").css('left', winW / 2 - $(".modal").width() / 2);
+// modals
 
+// var modal = document.getElementById("myModal");
+// var img = $(".myImg");
+// var modalImg = $("#images");
+// var captionText = document.getElementById("caption");
+// var span = document.getElementsByClassName("close")[0];
 
-// var gridImage = $(".myImg");
+// $(".myImg").click(function() {
+//   modal.style.display = "block";
+//   var newSrc = this.src;
+//   modalImg.attr("src", newSrc);
+//   captionText.innerHTML = this.alt;
+// });
 
-// for (i = 0; i < gridImage.length; i++) {
-//   gridImage.attr("data-num", [i]);
-//   console.log(gridImage[i]);
+// span.onclick = function() {
+//   //modal.style.display = "none";
+//   $("#myModal").fadeOut("slow");
 // }
 
-// var gridImages = ["assets/images/hangman.png", "assets/images/crystal-collector.png","assets/images/giftastic.png"];
-
-// for (var i = 0; i < gridImages.length; i++) {
-
-//   var imageSrc = $("img");
-//   imageSrc.attr("src", gridImages[i]);
-//   imageSrc.addClass("myImg");
-//   imageSrc.attr("data-num", [i]);
-//   $("#grid").append(imageSrc);
+// window.onclick = function (event) {
+//   if (event.target == modal) {
+//     //modal.style.display = "none";
+//     $("#myModal").fadeOut("slow");
+//   }
 // }
+
+// end modals
