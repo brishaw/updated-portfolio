@@ -74,20 +74,92 @@ $(document).ready(function () {
   });
 });
 
-//
+// image grid
+
+var imgArr = ["assets/images/hangman.png", "assets/images/crystal-collector.png", "assets/images/train_time.png", "assets/images/liribot.png", "assets/images/night_out.png", "assets/images/eat-da-burger.png", "assets/images/bamazon.png", "assets/images/friend-finder.png", "assets/images/adv-word-guess.png","assets/images/idecide.png"];
+
+for (var i = 0; i < imgArr.length; i++) {
+  
+  var holder = $("<div>");
+  
+  holder.addClass("img-caption");
+
+  $("#grid").append(holder);
+
+
+  var aImg = $("<img>");
+
+  aImg.addClass("izage");
+
+  aImg.attr("src", imgArr[i]);
+  aImg.attr("data-num", i);
+
+  holder.append(aImg);
+
+
+  var cap = $("<div>");
+
+  cap.addClass("caption");
+
+  holder.append(cap);
+
+  cap.append("<h3>");
+  cap.append("<p>");
+
+
+  var linkWrap = $("<div>");
+  
+  linkWrap.addClass("link-wrap");
+
+  holder.append(linkWrap);
+
+
+  var tar = $("<a>");
+
+  tar.addClass("myImg");
+
+  linkWrap.append(tar);
+
+
+  var linkIcon = $("<i>");
+  
+  linkIcon.addClass("fa fa-search");
+
+  tar.append(linkIcon);
+
+
+  var infoText = $("<a>");
+  
+  linkWrap.append(infoText);
+
+  var infoIcon = $("<i>");
+
+  infoIcon.addClass("fa fa-link");
+
+  infoText.append(infoIcon);
+
+}
+
+
+// modal
 
 var modal = document.getElementById("myModal");
 var modalImg = $("#images");
 var captionText = document.getElementById("caption");
 var span = document.getElementsByClassName("close")[0];
 
+
+
 $(".myImg").click(function () {
-  $("#myModal").css("display", "block");
-  var newSrc = document.getElementsByClassName("izage")[0].src;
   
-  console.log(newSrc);
+  $("#myModal").css("display", "block");
+
+  var newSrc = document.getElementsByClassName("izage")[0].src;
+
   modalImg.attr("src", newSrc);
+
   captionText.innerHTML = document.getElementsByClassName("izage")[0].alt;
+  
 });
 
 span.onclick = function() {
@@ -99,33 +171,3 @@ window.onclick = function (event) {
     $("#myModal").fadeOut("slow");
   }
 }
-
-
-// modals
-
-// var modal = document.getElementById("myModal");
-// var img = $(".myImg");
-// var modalImg = $("#images");
-// var captionText = document.getElementById("caption");
-// var span = document.getElementsByClassName("close")[0];
-
-// $(".myImg").click(function() {
-//   modal.style.display = "block";
-//   var newSrc = this.src;
-//   modalImg.attr("src", newSrc);
-//   captionText.innerHTML = this.alt;
-// });
-
-// span.onclick = function() {
-//   //modal.style.display = "none";
-//   $("#myModal").fadeOut("slow");
-// }
-
-// window.onclick = function (event) {
-//   if (event.target == modal) {
-//     //modal.style.display = "none";
-//     $("#myModal").fadeOut("slow");
-//   }
-// }
-
-// end modals
