@@ -76,7 +76,7 @@ $(document).ready(function () {
 
 // image grid
 
-var imgArr = ["assets/images/hangman.png", "assets/images/crystal-collector.png", "assets/images/train_time.png", "assets/images/liribot.png", "assets/images/night_out.png", "assets/images/eat-da-burger.png", "assets/images/bamazon.png", "assets/images/friend-finder.png", "assets/images/adv-word-guess.png","assets/images/idecide.png"];
+var imgArr = ["assets/images/hangman.png", "assets/images/crystal-collector.png", "assets/images/giftastic.png",  "assets/images/train_time.png", "assets/images/liribot.png", "assets/images/night_out.png", "assets/images/eat-da-burger.png", "assets/images/bamazon.png", "assets/images/friend-finder.png", "assets/images/adv-word-guess.png","assets/images/idecide.png"];
 
 for (var i = 0; i < imgArr.length; i++) {
   
@@ -89,7 +89,7 @@ for (var i = 0; i < imgArr.length; i++) {
 
   var aImg = $("<img>");
 
-  aImg.addClass("izage");
+  aImg.attr("id", "izage");
 
   aImg.attr("src", imgArr[i]);
   aImg.attr("data-num", i);
@@ -150,15 +150,19 @@ var span = document.getElementsByClassName("close")[0];
 
 
 
-$(".myImg").click(function () {
-  
-  $("#myModal").css("display", "block");
+$(".myImg").click(function (event) {
+  var tru = event.target;
+ 
+  console.log($(event.target).parentsUntil("img")[2].children[0]);
 
-  var newSrc = document.getElementsByClassName("izage")[0].src;
+  //var newSrc = document.getElementById("izage").src;
+  var newSrc = $(event.target).parentsUntil("img")[2].children[0].src;
 
   modalImg.attr("src", newSrc);
 
-  captionText.innerHTML = document.getElementsByClassName("izage")[0].alt;
+  captionText.innerHTML = document.getElementById("izage").alt;
+
+  $("#myModal").css("display", "block");
   
 });
 
