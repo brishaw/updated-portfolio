@@ -389,7 +389,7 @@ body .modal .modal-content .close {
   color: #aaaaaa;
   position: absolute;
   right: 3%;
-  top: 2%;
+  top: 0;
   font-size: 28px;
   font-weight: bold;
 }
@@ -611,6 +611,9 @@ body .contact-form .form-button button:hover {
   }
   body .container .main {
     padding: 0 10px;
+  }
+  body .container footer ul {
+    padding: 7px 11px;
   }
 }
 @media (max-width: 520px) {

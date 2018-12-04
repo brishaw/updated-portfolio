@@ -445,10 +445,9 @@ body {
 
       .close {
         color: #aaaaaa;
-        //float: right;
         position: absolute;
         right: 3%;
-        top: 2%;
+        top: 0;
         font-size: 28px;
         font-weight: bold;
 
@@ -595,6 +594,12 @@ body {
 
     .main {
       padding: 0 10px;
+    }
+
+    footer {
+      ul {
+        padding: 7px 11px;
+      }
     }
   }
 }

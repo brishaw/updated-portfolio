@@ -148,8 +148,6 @@ var modalImg = $("#images");
 var captionText = document.getElementById("caption");
 var span = document.getElementsByClassName("close")[0];
 
-
-
 $(".myImg").click(function (event) {
   var tru = event.target;
  
@@ -175,3 +173,12 @@ window.onclick = function (event) {
     $("#myModal").fadeOut("slow");
   }
 }
+
+// contact form
+var send = $("#contact-submit");
+if (send) {
+  send.on("click", function(){
+    this.innerHTML = "...Sending";
+  })
+}
+
