@@ -23,7 +23,7 @@ $(".control-button").on("click", function(){
 
 // parallax
 
-// Create cross browser requestAnimationFrame method:
+// create cross browser requestAnimationFrame method:
 window.requestAnimationFrame = window.requestAnimationFrame
   || window.mozRequestAnimationFrame
   || window.webkitRequestAnimationFrame
@@ -74,9 +74,19 @@ $(document).ready(function () {
   });
 });
 
+// link grid
+var infoArr = [
+  "https://github.com/brishaw/Word-Guess-Game/blob/master/README.md", "https://github.com/brishaw/unit-4-game/blob/master/README.md", "https://github.com/brishaw/giftastic/blob/master/README.md", "https://github.com/brishaw/train_time/blob/master/README.md", "https://github.com/brishaw/liri-node-app/blob/master/README.md", "https://github.com/brishaw/project_1/blob/master/README.md", "https://github.com/brishaw/burger-sequel/blob/master/README.md", "https://github.com/brishaw/bamazon/blob/master/README.md",
+  "https://github.com/brishaw/friend-finder/blob/master/README.md",
+  "https://github.com/brishaw/node-guess/blob/master/README.md", "https://github.com/torre-matthew/TheCrimsonKnuckleRepo/blob/master/README.md"
+];
+
 // image grid
 
-var imgArr = ["assets/images/hangman.png", "assets/images/crystal-collector.png", "assets/images/giftastic.png",  "assets/images/train_time.png", "assets/images/liribot.png", "assets/images/night_out.png", "assets/images/eat-da-burger.png", "assets/images/bamazon.png", "assets/images/friend-finder.png", "assets/images/adv-word-guess.png","assets/images/idecide.png"];
+var imgArr = [
+  "assets/images/hangman.png", "assets/images/crystal-collector.png", "assets/images/giftastic.png",  "assets/images/train_time.png", "assets/images/liribot.png", "assets/images/night_out.png", "assets/images/eat-da-burger.png", "assets/images/bamazon.png", "assets/images/friend-finder.png", "assets/images/adv-word-guess.png","assets/images/idecide.png"];
+
+
 
 for (var i = 0; i < imgArr.length; i++) {
   
@@ -107,6 +117,10 @@ for (var i = 0; i < imgArr.length; i++) {
   cap.append("<p>");
 
 
+  var darkCover = $("<div>");
+  darkCover.addClass("dark-cover");
+  holder.append(darkCover);
+
   var linkWrap = $("<div>");
   
   linkWrap.addClass("link-wrap");
@@ -130,7 +144,10 @@ for (var i = 0; i < imgArr.length; i++) {
 
   var infoText = $("<a>");
   
+  infoText.addClass("myLink");
+
   linkWrap.append(infoText);
+
 
   var infoIcon = $("<i>");
 
@@ -138,7 +155,16 @@ for (var i = 0; i < imgArr.length; i++) {
 
   infoText.append(infoIcon);
 
+
+  infoText.attr("href", infoArr[i]);
+  infoText.attr("target", "_blank");
 }
+
+// info
+
+$(".myInfo").click(function (event) {
+
+})
 
 
 // modal
