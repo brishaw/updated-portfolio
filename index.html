@@ -7,7 +7,7 @@
       crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body>
+  <body onload="footerYear();">
     
     <button class="control-button metal">Brian Shaw</button>
     
@@ -28,6 +28,17 @@
         <div class="res-button">
           <h3><a href="#resume">Resume</a></h3>
         </div>
+        <section class="bio">
+          <h2>Bio</h2>
+          <img src="assets/images/hed_me.png" alt="a photo of me" />
+          <p>As a Full Stack Web Developer I am able to build sophisticated websites with full database backends all the way
+            from mockup to rollout. Adept at working with diverse teams to implement projects.
+            I am an experienced professional with expert knowledge in development and design. Using cutting edge technology, I
+            am creative, resourceful and exercise extreme attention to detail. I enjoy a fast-paced and collaborative project
+            environment and possess the abilities to problem-solve by brain-storming, flow charts and story-boarding. I am
+            highly proficient in HTML/CSS, Javascript, jQuery, MERN, MySQL and PHP as well as numerous Adobe CC programs. I am
+            an excellent communicator with strengths in both soft-skills and interpersonal skills.</p>
+        </section>
         <section id="grid" class="my-grid">
           <!-- images populate here -->
         </section>
@@ -35,24 +46,26 @@
           <h3><a href="#contact">Contact</a></h3>
         </div>
         
-        <section class="bio">
-          <h2>Bio</h2>
-          <img src="assets/images/hed_me.png" alt="a photo of me" />
-          <p>As a Full Stack Web Developer I am able to build sophisticated websites with full database backends all the way from mockup to rollout. Adept at working with diverse teams to implement projects.
-          I am an experienced professional with expert knowledge in development and design. Using cutting edge technology, I am creative, resourceful and exercise extreme attention to detail. I enjoy a fast-paced and collaborative project environment and possess the abilities to problem-solve by brain-storming, flow charts and story-boarding. I am highly proficient in HTML/CSS, Javascript, jQuery, MERN, MySQL and PHP as well as numerous Adobe CC programs. I am an excellent communicator with strengths in both soft-skills and interpersonal skills.</p>
-        </section>
+        
 
         <h2 id="resume">Resume</h2>
         <section class="resume-grid">
           <div class="fancy">
             <img class="toon" src="assets/images/headOne.png" alt="Fancy Resume">
-            <h3><a href="https://drive.google.com/open?id=1YDQ08k85Lh8v4Pg7OPctwOW023JvhiYU">Download PDF (Fancy Resume!)</a></h3>
+            <h3><a href="https://drive.google.com/open?id=1YDQ08k85Lh8v4Pg7OPctwOW023JvhiYU">Download My Resume</a></h3>
           </div>
           <div class="no-fancy">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac turpis eget lectus mollis congue. Maecenas consequat
+            elit eros, fermentum ornare eros posuere a. Fusce vitae erat vitae erat fermentum consequat. In quam ligula, blandit
+            eget scelerisque vel, dignissim elementum eros. Maecenas maximus sapien eu ullamcorper tempor. Pellentesque at viverra
+            magna, non vulputate mi. Sed tempus, sapien at lobortis maximus, augue mauris iaculis enim, nec tincidunt urna dui in
+            arcu.</p>
+          </div>
+          <!-- <div class="no-fancy">
             <img class="toon" src="assets/images/headTwo.png" alt="Fancy Resume">
             <h3><a href="https://drive.google.com/open?id=1YDQ08k85Lh8v4Pg7OPctwOW023JvhiYU">Download Plain-Text (Bot Resume)</a></h3>
 
-          </div>
+          </div> -->
         </section>
 
         <section id="contact" class="contact">
@@ -89,7 +102,7 @@
           <ul>
             <li><a href="http://linkedin.com/in/brianshaw-3b5728167"><i class="fab fa-linkedin fa-3x"></i></a></li>
             <li><a href="http://github.com/brishaw/"><i class="fab fa-github fa-3x"></i></a></li>
-            <li class="copy">2018 Brian Shaw</li>
+            <li class="copy"><span id="footerYear"></span> Brian Shaw</li>
           </ul>
         </div>
       </footer>
