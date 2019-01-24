@@ -98,7 +98,33 @@ body {
     } // .right
 
     header {
-      display: none;
+      display: block;
+      width: 100%;
+      height: 70px;
+      position: fixed;
+      top: 0;
+      background-color: rgba(0, 37, 66, 0.77);;
+      z-index: 7;
+
+      nav {
+        display: flex;
+        margin: 0 auto;
+        padding: 20px 0;
+        max-width: 980px;
+
+        .logo {
+          color: #ffffff;
+          font-size: 1.47rem;
+          font-weight: bolder;
+          text-decoration: none;
+          flex: auto;
+        }
+
+        ul {
+          display: none;
+
+        }
+      }
     }
 
     .main {
@@ -211,7 +237,7 @@ body {
 
         h2 {
           color: #ffffff;
-          margin: 70px 0 20px 0;
+          margin: 0 0 20px 0;
         }
 
         p {
@@ -222,104 +248,107 @@ body {
         }
       } // .bio
 
+      .resume {
+
       h2 {
           color: #ffffff;
-          margin: 70px 0 20px 0;
+          margin: 0 0 20px 0;
+          padding-top: 90px;
         }
 
-      .resume-grid {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: 50vh;
-        grid-gap: 20px;
+        .resume-grid {
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          grid-template-rows: 50vh;
+          grid-gap: 20px;
 
-        .fancy {
-          grid-column: span 6;
-          position: relative;
+          .fancy {
+            grid-column: span 6;
+            position: relative;
 
-          .toon {
-            max-width: 50%;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-          }
-          
-          h3 {
-            text-align: center;
-            position: absolute;
-            margin: auto;
-            bottom: 100px;
-            left: 0;
-            right: 0;
+            .toon {
+              max-width: 50%;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              margin: 0 auto;
+            }
+            
+            h3 {
+              text-align: center;
+              position: absolute;
+              margin: auto;
+              bottom: 100px;
+              left: 0;
+              right: 0;
 
-            a {
-              color: #ffffff;
-              text-decoration: none;
-              transition: 300ms ease all;
-              width: 70%;
-              padding: 20px;
-              background-color: #1a78af;
-
-              &:hover {
+              a {
                 color: #ffffff;
+                text-decoration: none;
                 transition: 300ms ease all;
-                background-color: #115f8b;
+                width: 70%;
+                padding: 20px;
+                background-color: #1a78af;
+
+                &:hover {
+                  color: #ffffff;
+                  transition: 300ms ease all;
+                  background-color: #115f8b;
+                }
+              }
+            }
+        }
+
+          .no-fancy {
+            grid-column: span 6;
+            position: relative;
+
+            p {
+              color: #ffffff;
+              font-size: 1.1rem;
+              font-weight: 200;
+              margin: 20px 40px 20px 0;
+            }
+
+            .toon {
+              padding-top: 10px;
+              max-width: 50%;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              margin: auto;
+            }
+
+            h3 {
+              text-align: center;
+              position: absolute;
+              margin: 0 auto;
+              bottom: 0;
+              left: 0;
+              right: 0;
+
+              a {
+                color: #ffffff;
+                text-decoration: none;
+                transition: 300ms ease all;
+                width: 70%;
+                padding: 20px;
+                background-color: #1a78af;
+
+                &:hover {
+                  color: #ffffff;
+                  transition: 300ms ease all;
+                  background-color: #115f8b;
+                }
               }
             }
           }
-      }
-
-        .no-fancy {
-          grid-column: span 6;
-          position: relative;
-
-          p {
-            color: #ffffff;
-            font-size: 1.1rem;
-            font-weight: 200;
-            margin: 20px 40px;
-          }
-
-          .toon {
-            padding-top: 10px;
-            max-width: 50%;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-          }
-
-          h3 {
-            text-align: center;
-            position: absolute;
-            margin: 0 auto;
-            bottom: 0;
-            left: 0;
-            right: 0;
-
-            a {
-              color: #ffffff;
-              text-decoration: none;
-              transition: 300ms ease all;
-              width: 70%;
-              padding: 20px;
-              background-color: #1a78af;
-
-              &:hover {
-                color: #ffffff;
-                transition: 300ms ease all;
-                background-color: #115f8b;
-              }
-            }
-          }
-        }
-      } // .resume-grid
-
+        } // .resume-grid
+      } // resume
       .contact {
 
         h2 {
@@ -553,6 +582,7 @@ body {
           margin: 0;
           padding: 0;
           list-style-type: none;
+          display: block;
 
           li {
             display: inline;
@@ -609,6 +639,19 @@ body {
     }
   }
 }
+
+@media ( max-width: 965px) {
+  .container { 
+    .main {
+      .bio {
+        img {
+          shape-outside: circle(50%);
+        }
+      }
+    }
+  }
+}
+
 @media ( max-width: 520px ) {
 
   .container {
@@ -634,15 +677,17 @@ body {
           }
         }
       }
-      .resume-grid {
-        grid-template-rows: 45vh 45vh;
+      .resume {
+        .resume-grid {
+          grid-template-rows: 10vh 45vh;
 
-        .fancy {
-          grid-column: span 12;
-        }
+          .fancy {
+            grid-column: span 12;
+          }
 
-        .no-fancy {
-          grid-column: span 12;
+          .no-fancy {
+            grid-column: span 12;
+          }
         }
       }
       .contact {
