@@ -652,6 +652,16 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .modal{
+    .modal-content{
+      img {
+        max-width: 350px;
+      }
+    }
+  }
+}
+
 @media ( max-width: 520px ) {
 
   .container {
@@ -719,5 +729,15 @@ body {
       }
     }
   } // .container
+}
+
+@media (max-width: 400px) {
+  .modal{
+    .modal-content{
+      img {
+        max-width: 270px;
+      }
+    }
+  }
 }
 } // body

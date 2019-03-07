@@ -76,6 +76,7 @@ $(document).ready(function () {
 
 // link grid
 var infoArr = [
+  "https://github.com/brishaw/joeks_again/blob/master/README.md",
   "https://github.com/torre-matthew/KnuckleProj3Repo/blob/master/README.md",
   "https://github.com/brishaw/clicky-game/blob/master/README.md",
   "https://github.com/brishaw/Word-Guess-Game/blob/master/README.md", "https://github.com/brishaw/unit-4-game/blob/master/README.md", "https://github.com/brishaw/giftastic/blob/master/README.md", "https://github.com/brishaw/train_time/blob/master/README.md", "https://github.com/brishaw/liri-node-app/blob/master/README.md", "https://github.com/brishaw/project_1/blob/master/README.md", "https://github.com/brishaw/burger-sequel/blob/master/README.md", "https://github.com/brishaw/bamazon/blob/master/README.md",
@@ -86,7 +87,7 @@ var infoArr = [
 // image grid
 
 var imgArr = [
-  "assets/images/pocket_pantry.png", "assets/images/benclicky.png", "assets/images/hangman.png", "assets/images/crystal-collector.png", "assets/images/giftastic.png",  "assets/images/train_time.png", "assets/images/liribot.png", "assets/images/night_out.png", "assets/images/eat-da-burger.png", "assets/images/bamazon.png", "assets/images/friend-finder.png", "assets/images/adv-word-guess.png","assets/images/idecide.png"];
+  "assets/images/recycled.png","assets/images/pocket_pantry.png", "assets/images/benclicky.png", "assets/images/hangman.png", "assets/images/crystal-collector.png", "assets/images/giftastic.png",  "assets/images/train_time.png", "assets/images/liribot.png", "assets/images/night_out.png", "assets/images/eat-da-burger.png", "assets/images/bamazon.png", "assets/images/friend-finder.png", "assets/images/adv-word-guess.png","assets/images/idecide.png"];
 
 
 

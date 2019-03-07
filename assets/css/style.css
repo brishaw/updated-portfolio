@@ -653,6 +653,11 @@ body .contact-form .form-button button:hover {
     shape-outside: circle(50%);
   }
 }
+@media (max-width: 768px) {
+  body .modal .modal-content img {
+    max-width: 350px;
+  }
+}
 @media (max-width: 520px) {
   body .container header nav {
     padding: 20px 11px;
@@ -682,6 +687,11 @@ body .contact-form .form-button button:hover {
     position: relative;
     margin-top: 0;
     transform: translateY(-11px);
+  }
+}
+@media (max-width: 400px) {
+  body .modal .modal-content img {
+    max-width: 270px;
   }
 }
 
